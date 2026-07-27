@@ -1,8 +1,47 @@
 package com.ssafy.ws.step3;
 
-/**
- * 잡지 정보를 나타내는 클래스
- */
-public class Magazine extends Book {
-	//코드를 작성해주세요. 
+public class Magazine extends Book{
+	protected int year;
+	protected int month;
+	
+	
+	protected Magazine() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	protected Magazine(String isbn, String title, String author, String publisher, int price, String desc, int year, int month) {
+		super(isbn, title, author, publisher, price, desc);
+		this.year = year;
+		this.month = month;
+	}
+	
+	
+	protected Magazine(int year, int month) {
+		super();
+		this.year = year;
+		this.month = month;
+	}
+	
+	//Getter & Setter
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "Magazine [year=" + year + ", month=" + month + "]";
+	}
+	
+	
+	
 }
